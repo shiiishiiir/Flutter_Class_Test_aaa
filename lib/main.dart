@@ -5,6 +5,7 @@ import 'package:aaaa/fghjklkjhgfkdj.dart';
 import 'package:aaaa/jhgfdfg.dart';
 import 'package:aaaa/past/Forthpage.dart';
 import 'package:aaaa/past/boom.dart';
+import 'package:aaaa/past/buttons.dart';
 import 'package:aaaa/past/form.dart';
 import 'package:aaaa/past/kdddd.dart';
 import 'package:aaaa/past/kdexxxx.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: tabdraw(),
+      home: butam(),
     );
   }
 }

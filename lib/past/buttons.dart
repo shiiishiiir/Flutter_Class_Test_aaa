@@ -1,12 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
-class butam extends StatelessWidget {
+class butam extends StatefulWidget {
   const butam({Key? key}) : super(key: key);
+
+  @override
+  State<butam> createState() => _butamState();
+}
+
+class _butamState extends State<butam> {
+  final GlobalKey<ScaffoldState> _globalKey= GlobalKey<ScaffoldState>();
+
+  _showSnackbar(){
+    var _mySnackbar= SnackBar(content: Text("Kemon Laglo ??"));
+    _globalKey.currentState!.showSnackBar(_mySnackbar);
+  }
+
+  _showToast(){
+    Fluttertoast.showToast(
+        msg: "Hellow Buddies <3 ",
+        toastLength: Toast.LENGTH_SHORT,
+        gravity: ToastGravity.CENTER,
+        timeInSecForIosWeb: 1,
+        backgroundColor: Colors.red,
+        textColor: Colors.white,
+        fontSize: 16.0);
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        key: _globalKey,
         backgroundColor: Colors.teal,
         body: Center(
           child: Column(
@@ -20,11 +45,23 @@ class butam extends StatelessWidget {
                     color: Colors.white),
               ),
               FloatingActionButton(
-                onPressed: () {},
+                onPressed: () {
+                  _showSnackbar();
+                },
                 child: Icon(Icons.lunch_dining),
               ),
               RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Fluttertoast.showToast(
+                      msg: "This is Center Short Toast",
+                      toastLength: Toast.LENGTH_SHORT,
+                      gravity: ToastGravity.CENTER,
+                      timeInSecForIosWeb: 1,
+                      backgroundColor: Colors.red,
+                      textColor: Colors.white,
+                      fontSize: 16.0
+                  );
+                },
                 child: Text("Najmus Sakib"),
                 color: Colors.orangeAccent,
               ),
