@@ -9,28 +9,27 @@ class butam extends StatefulWidget {
 }
 
 class _butamState extends State<butam> {
-  final GlobalKey<ScaffoldState> _globalKey= GlobalKey<ScaffoldState>();
+  final GlobalKey<ScaffoldState> _globalKey = GlobalKey<ScaffoldState>();
 
-  _showSnackbar(){
-    var _mySnackbar= SnackBar(content: Text("Kemon Laglo ??"));
+  _showSnackbar() {
+    var _mySnackbar = SnackBar(content: Text("Kemon Laglo ??"));
     _globalKey.currentState!.showSnackBar(_mySnackbar);
-  }
-
-  _showToast(){
-    Fluttertoast.showToast(
-        msg: "Hellow Buddies <3 ",
-        toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Colors.red,
-        textColor: Colors.white,
-        fontSize: 16.0);
   }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(flexibleSpace: Container(
+          height: 300,
+          decoration: BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.center,
+                  end: Alignment.bottomCenter,
+                  // tileMode: TileMode.repeated,
+                  colors: [Colors.pinkAccent, Colors.greenAccent])
+          ),
+        ) ,),
         key: _globalKey,
         backgroundColor: Colors.teal,
         body: Center(
@@ -53,20 +52,36 @@ class _butamState extends State<butam> {
               RaisedButton(
                 onPressed: () {
                   Fluttertoast.showToast(
-                      msg: "This is Center Short Toast",
+                      msg: "Ki obostha",
                       toastLength: Toast.LENGTH_SHORT,
-                      gravity: ToastGravity.CENTER,
+                      gravity: ToastGravity.BOTTOM,
                       timeInSecForIosWeb: 1,
                       backgroundColor: Colors.red,
                       textColor: Colors.white,
-                      fontSize: 16.0
-                  );
+                      fontSize: 16.0);
                 },
                 child: Text("Najmus Sakib"),
                 color: Colors.orangeAccent,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return AlertDialog(
+                          title: Text("Alert"),
+                          content: Text("You are Beautiful, Understand!"),
+                          actions: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: Text("Ok, Got It"),
+                            ),
+                          ],
+                        );
+                      });
+                },
                 child: Icon(Icons.free_breakfast),
               ),
               FlatButton(
@@ -78,6 +93,16 @@ class _butamState extends State<butam> {
                 child: Text(
                   "magic",
                   style: TextStyle(color: Colors.black),
+                ),
+              ),
+              Container(
+                height: 300,
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.center,
+                      end: Alignment.bottomCenter,
+                      tileMode: TileMode.repeated,
+                      colors: [Colors.pinkAccent, Colors.greenAccent])
                 ),
               ),
             ],
