@@ -1,4 +1,5 @@
 
+import 'package:aaaa/Sliderssss.dart';
 import 'package:aaaa/drawtab.dart';
 import 'package:aaaa/expandPageView.dart';
 import 'package:aaaa/fghjklkjhgfkdj.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: butam(),
+      home: sliddeerrrrrr(),
     );
   }
 }

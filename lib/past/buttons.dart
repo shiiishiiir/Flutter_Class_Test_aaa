@@ -20,16 +20,16 @@ class _butamState extends State<butam> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(flexibleSpace: Container(
-          height: 300,
-          decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.center,
-                  end: Alignment.bottomCenter,
-                  // tileMode: TileMode.repeated,
-                  colors: [Colors.pinkAccent, Colors.greenAccent])
+        appBar: AppBar(
+          flexibleSpace: Container(
+            height: 300,
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.center, end: Alignment.bottomCenter,
+                    // tileMode: TileMode.repeated,
+                    colors: [Colors.pinkAccent, Colors.greenAccent])),
           ),
-        ) ,),
+        ),
         key: _globalKey,
         backgroundColor: Colors.teal,
         body: Center(
@@ -98,11 +98,12 @@ class _butamState extends State<butam> {
               Container(
                 height: 300,
                 decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    begin: Alignment.center,
-                      end: Alignment.bottomCenter,
-                      tileMode: TileMode.repeated,
-                      colors: [Colors.pinkAccent, Colors.greenAccent])
+                    gradient: LinearGradient(
+                        begin: Alignment.center,
+                        end: Alignment.bottomCenter,
+                        tileMode: TileMode.repeated,
+                        colors: [Colors.pinkAccent, Colors.greenAccent],
+                    ),
                 ),
               ),
             ],
@@ -111,4 +112,76 @@ class _butamState extends State<butam> {
       ),
     );
   }
+}
+
+
+
+
+
+class sliverrrr extends StatefulWidget {
+  const sliverrrr({Key? key}) : super(key: key);
+
+  @override
+  _sliverrrrState createState() => _sliverrrrState();
+}
+
+class _sliverrrrState extends State<sliverrrr> {
+  @override
+  Widget build(BuildContext context) {
+    return SafeArea(
+      child: Scaffold(
+        body: CustomScrollView(
+          slivers: <Widget>[
+            SliverAppBar(
+              // pinned: true,
+              expandedHeight: 200,
+              backgroundColor: Colors.cyan,
+              flexibleSpace: FlexibleSpaceBar(
+                title: Text("Sliver App Bar fixed"),
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildListDelegate(
+                <Widget>[
+                  ListTile(
+                    title: Text("kjhghkj"),
+                  ),
+                  ListTile(
+                    title: Text("kjhghkj"),
+                  ),
+                  ListTile(
+                    title: Text("kjhghkj"),
+                  ),
+                  addDetails("name", "description"),
+                  addDetails("one", "description"),
+                  addDetails("two", "description"),
+                  addDetails("three", "description"),
+                  addDetails("four", "description"),
+                  addDetails("five", "description"),
+                  addDetails("six", "description"),
+                  addDetails("seven", "description"),
+                  addDetails("eight", "description"),
+                  addDetails("nine", "description"),
+                  addDetails("ten", "description"),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+Widget addDetails(
+ String name,
+String description,
+) {
+  return ListTile(
+    title: Text(name),
+    subtitle: Text(description),
+    leading: CircleAvatar(
+      child: Text(name[0]),
+    ),
+  );
 }
