@@ -102,7 +102,9 @@ class _butamState extends State<butam> {
                         begin: Alignment.center,
                         end: Alignment.bottomCenter,
                         tileMode: TileMode.repeated,
-                        colors: [Colors.pinkAccent, Colors.greenAccent],
+                        colors: [
+                          Colors.pinkAccent,
+                          Colors.greenAccent],
                     ),
                 ),
               ),

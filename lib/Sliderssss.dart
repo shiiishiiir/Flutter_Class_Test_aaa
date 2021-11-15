@@ -37,6 +37,9 @@ class _sliddeerrrrrrState extends State<sliddeerrrrrr> {
   }
 }
 
+
+
+
 class sliderrr extends StatefulWidget {
   const sliderrr({Key? key}) : super(key: key);
 
@@ -50,6 +53,7 @@ class _sliderrrState extends State<sliderrr> {
     "https://flutter.dev/assets/images/showcase/cards/bmw-top-1200.jpg",
     "https://flutter.dev/assets/images/showcase/cards/nubank-top-600.jpg"
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

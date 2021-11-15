@@ -38,6 +38,7 @@ dependencies:
   fluttertoast: ^8.0.8
   carousel_slider: ^4.0.0
 
+
 flutter_launcher_name:
   name: "aaaab"
 
