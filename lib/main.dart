@@ -1,9 +1,12 @@
 
+import 'package:aaaa/Daniell.dart';
 import 'package:aaaa/Sliderssss.dart';
+import 'package:aaaa/dd.dart';
 import 'package:aaaa/drawtab.dart';
 import 'package:aaaa/expandPageView.dart';
 import 'package:aaaa/fghjklkjhgfkdj.dart';
 import 'package:aaaa/jhgfdfg.dart';
+import 'package:aaaa/littleWidgetss.dart';
 import 'package:aaaa/past/Forthpage.dart';
 import 'package:aaaa/past/boom.dart';
 import 'package:aaaa/past/buttons.dart';
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: sliderrr(),
+      home: dk(),
     );
   }
 }
