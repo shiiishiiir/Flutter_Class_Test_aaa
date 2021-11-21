@@ -18,6 +18,7 @@ import 'package:aaaa/past/shahinn.dart';
 import 'package:aaaa/past/splash.dart';
 import 'package:aaaa/past/splashscreen.dart';
 import 'package:aaaa/past/textfield.dart';
+import 'package:aaaa/past/thirdpage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: dk(),
+      home: thirdpage(),
     );
   }
 }
