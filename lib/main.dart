@@ -1,4 +1,5 @@
 
+import 'package:aaaa/Contact%20Lists/ContactListWithArray.dart';
 import 'package:aaaa/Daniell.dart';
 import 'package:aaaa/Sliderssss.dart';
 import 'package:aaaa/dd.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: dk(),
+      home: ContactListWithArray(),
     );
   }
 }
