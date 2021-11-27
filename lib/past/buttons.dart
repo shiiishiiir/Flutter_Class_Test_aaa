@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class butam extends StatefulWidget {
@@ -77,6 +78,12 @@ class _butamState extends State<butam> {
                                 Navigator.pop(context);
                               },
                               child: Text("Ok, Got It"),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                SystemNavigator.pop();
+                              },
+                              child: Text("Exit"),
                             ),
                           ],
                         );
@@ -186,4 +193,50 @@ String description,
       child: Text(name[0]),
     ),
   );
+}
+
+
+
+
+class exitt extends StatefulWidget {
+  const exitt({Key? key}) : super(key: key);
+
+  @override
+  _exittState createState() => _exittState();
+}
+
+class _exittState extends State<exitt> {
+  
+  showExitPopup(){
+    return showDialog(
+          context: context,
+          builder: (context) {
+            return AlertDialog(
+              title: Text("Alert"),
+              content: Text("You are Beautiful, Understand!"),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Text("Ok, Got It"),
+                ),
+                TextButton(
+                  onPressed: () {
+                    SystemNavigator.pop();
+                  },
+                  child: Text("Exit"),
+                ),
+              ],
+            );
+          });
+
+  }
+  
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("Exit Menue"),),
+    );
+  }
 }
