@@ -1,5 +1,6 @@
 
 import 'package:aaaa/Contact%20Lists/ContactListWithArray.dart';
+import 'package:aaaa/Contact%20Lists/JsonArrayContact.dart';
 import 'package:aaaa/Daniell.dart';
 import 'package:aaaa/RegForm.dart';
 import 'package:aaaa/Sliderssss.dart';
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RegFormm(),
+      home: JsonDataaaa(),
     );
   }
 }
