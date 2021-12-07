@@ -11,6 +11,7 @@ class ContactListWithArray extends StatefulWidget {
 
 class _ContactListWithArrayState extends State<ContactListWithArray> {
   final List peopleList = [
+    {"Name": "Zisu", "Phone": "01632145897"},
     {"Name": "Shishir", "Phone": "01914106262"},
     {"Name": "ShahArif", "Phone": "013654778965"},
     {"Name": "Shihan", "Phone": "01236547852"},
@@ -47,17 +48,16 @@ class _ContactListWithArrayState extends State<ContactListWithArray> {
                     title: Text(peopleList[index]["Name"]),
                     subtitle: Text(peopleList[index]["Phone"]),
                     onTap: () {
-                      // Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => ContactView(useList: peopleList[index],)));
-
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => TestContactView(peopleList[index])));
+                              builder: (context) => ContactView(useList: peopleList[index],)));
 
-
+                      // Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) =>
+                      //             TestContactView(peopleList[index])));
                     },
                   ),
                 ],

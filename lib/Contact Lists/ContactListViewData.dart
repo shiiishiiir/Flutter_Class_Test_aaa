@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ContactView extends StatefulWidget {
   var useList;
-  ContactView({ this.useList});
+  ContactView({this.useList});
 
 
   @override
